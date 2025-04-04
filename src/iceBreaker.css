@@ -225,10 +225,12 @@ h2{
 }
 
 #remove{
+    cursor: pointer;
     background-color: #a41b1b;
 }
 
 #keep{
+    cursor: pointer;
     background-color: #19a019;
 }
 
