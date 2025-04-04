@@ -232,6 +232,15 @@ h2{
     background-color: #19a019;
 }
 
+#remove:hover{
+    background-color: #6e1212;
+}
+
+#keep:hover{
+    background-color: #127312;
+}
+
+
 canvas {
     position: fixed;
     top: 0;
