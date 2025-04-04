@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Group 6</title>
+  <link rel="stylesheet" href="iceBreaker.css" />
+  <script src="https://kit.fontawesome.com/22dc8d85a3.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="asstes/icon.svg"/>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <p class="head2" id="home">GROUP 6</p>
+      <p id="pick"><i class="fa-solid fa-shuffle"></i></p>
+    </div>
+    <div class="content">
+      <div class="left">
+        <p class="head1"><span id="auto-type2"></span></p>
+        <div class="codecontent" id="editor"></div>
+      </div>
+      <div class="right">
+        <button id="prev">Prev</button>
+        <button id="runButton">▶ Run Code</button>
+        <button id="next">Next</button>
+        <div id="output">/* Output will appear here */</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="close">&times;</span>
+      <h2 id="gl">Good Luck!</h2>
+      <p id="modal-name">Name</p>
+      <button id="remove">Remove</button>
+      <button id="keep">Keep</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/function.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <script>
+      var typed = new Typed('#auto-type2', {
+      strings: ['Solve the problem below...'],
+      typeSpeed: 100,
+      backDelay: 1000,
+      loop: true
+      });
+  </script>
+
+  <script src="scripts/random.js"></script>
+</body>
+</html>
