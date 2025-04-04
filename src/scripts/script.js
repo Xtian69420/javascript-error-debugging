@@ -23,7 +23,7 @@ let largestNumber = findLargestNumber(number);
 // Display output
 // Expected output: 9`,
   `// Bonus!
-//Ligtas ka hindi nga lang sa langit.`,
+//Ligtas ka, hindi nga lang sa langit.`,
   `// Function to check if a number is even
 function isEven(number) {
     if (!number / 2 === 1) {  
