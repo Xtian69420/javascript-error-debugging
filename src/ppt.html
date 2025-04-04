@@ -12,6 +12,10 @@
   <link rel="icon" href="asstes/icon.svg"/>
 </head>
 <body>
+  <div id="loadingOverlay">
+    <div class="loader"></div>
+  </div>
+
   <div class="container">
     <div class="nav">
       <p class="head2" id="home">GROUP 6</p>
@@ -23,5 +27,12 @@
     </div>
   </div>
   <script src="scripts/function.js"></script>
+  <script>
+    window.onload = function() {
+              setTimeout(function() {
+                  document.getElementById('loadingOverlay').style.display = 'none';
+              }, 2000); 
+          };
+  </script>
 </body>
 </html>
