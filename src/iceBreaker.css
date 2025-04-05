@@ -104,6 +104,9 @@ p {
     border: 1px solid #444;
     padding: 0;
 }
+#editor{
+    touch-action: auto;
+}
 
 .right {
     display: grid;

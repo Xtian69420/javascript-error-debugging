@@ -103,6 +103,9 @@ p{
 #runButton:hover {
     background-color: #0e2d5c;
 }
+#editor{
+    touch-action: auto;
+}
 
 #output {
     flex-grow: 1;
