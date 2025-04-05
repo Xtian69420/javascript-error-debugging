@@ -114,18 +114,20 @@ document.getElementById("runButton").addEventListener("click", () => {
   let logBuffer = "";
 
   console.log = function (...args) {
-    logBuffer += args.join(" ") + "\n";
+    logBuffer += args.join(" ") + "\n"; 
   };
 
   try {
-    new Function(code)(); 
-    outputEl.textContent = logBuffer || "(no output)";
+    new Function(code)();
+    outputEl.textContent = logBuffer || "(no output)"; 
   } catch (err) {
-    outputEl.textContent = "❌ Error: " + err.message;
+
+    outputEl.textContent = `❌ Error: ${err.message}`;
   }
 
   console.log = originalLog; 
 });
+
 
 document.getElementById("prev").addEventListener("click", () => {
   if (currentCode > 0) {
