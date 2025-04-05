@@ -50,6 +50,7 @@ require(['vs/editor/editor.main'], function () {
     fontSize: 24,
     automaticLayout: true,
     glyphMargin: false,
+    accessibilitySupport: 'on',
     minimap: {
       enabled: false
     },

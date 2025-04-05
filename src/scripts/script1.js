@@ -11,6 +11,7 @@ require(['vs/editor/editor.main'], function () {
     language: 'javascript', 
     theme: 'vs-dark', 
     fontSize: 24, 
+    accessibilitySupport: 'on',
     automaticLayout: true 
   }); 
 
