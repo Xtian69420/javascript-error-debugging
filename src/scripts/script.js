@@ -40,22 +40,63 @@ console.log(result);  `
 let currentCode = 0; 
 
 let editor;
-require.config({ paths: { 'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.44.0/min/vs' }}); 
-require(['vs/editor/editor.main'], function () { 
-  editor = monaco.editor.create(document.getElementById('editor'), { 
-    value: codes[currentCode], 
-    language: 'javascript', 
-    theme: 'vs-dark', 
-    fontSize: 24, 
+
+require.config({ paths: { 'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.44.0/min/vs' }});
+require(['vs/editor/editor.main'], function () {
+  editor = monaco.editor.create(document.getElementById('editor'), {
+    value: codes[currentCode],
+    language: 'javascript',
+    theme: 'vs-dark',
+    fontSize: 24,
     automaticLayout: true,
+    glyphMargin: false,
     minimap: {
-      enabled: false  
+      enabled: false
     },
     scrollbar: {
-      vertical: "auto", 
-      horizontal: "auto" 
-    }
-  });  
+      vertical: "auto",
+      horizontal: "auto"
+    },
+    lineNumbers: window.innerWidth <= 550 ? 'off' : 'on'
+  });
+
+  const mediaQuery = window.matchMedia('(max-width: 650px)');
+  const fontSizeQuery = window.matchMedia('(max-width: 725px)');
+  const smallScreenQuery = window.matchMedia('(max-width: 400px)');
+
+  function handleMediaChange(e) {
+    editor.updateOptions({
+      lineNumbers: e.matches ? 'off' : 'on'
+    });
+  }
+  function handleFontSizeChange(e) {
+    editor.updateOptions({
+      fontSize: e.matches ? 18 : 24
+    });
+  }
+  function handleSmallScreenFontSizeChange(e) {
+    editor.updateOptions({
+      fontSize: e.matches ? 10 : (fontSizeQuery.matches ? 18 : 24)
+    });
+  }
+
+  function handleMarginChange(e) {
+    editor.updateOptions({
+      glyphMargin: !e.matches
+    });
+  }
+
+  handleMarginChange(mediaQuery);
+  mediaQuery.addEventListener('change', handleMarginChange);
+
+  handleMediaChange(mediaQuery);
+  mediaQuery.addEventListener('change', handleMediaChange);
+
+  handleFontSizeChange(fontSizeQuery);
+  fontSizeQuery.addEventListener('change', handleFontSizeChange);
+
+  handleSmallScreenFontSizeChange(smallScreenQuery);
+  smallScreenQuery.addEventListener('change', handleSmallScreenFontSizeChange);
 });
 
 document.getElementById("runButton").addEventListener("click", () => {

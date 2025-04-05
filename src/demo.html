@@ -22,7 +22,7 @@
     </div>
     <div class="content">
       <div class="left">
-        <p class="head1">DEMO</p>
+        <p class="head1"><span id="auto-type2"></span></p>
         <div class="codecontent" id="editor"></div>
     </div>
     <div class="right">
@@ -31,9 +31,20 @@
     </div>
     </div>
   </div>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
   <script src="scripts/script1.js"></script>
   <script src="scripts/function.js"></script>
+
+  <script>
+    var typed = new Typed('#auto-type2', {
+    strings: ['DEMONSTRATION...'],
+    typeSpeed: 110,
+    backDelay: 1100,
+    loop: true
+    });
+</script>
+
   <script>
     window.onload = function() {
               setTimeout(function() {

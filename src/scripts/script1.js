@@ -13,7 +13,46 @@ require(['vs/editor/editor.main'], function () {
     fontSize: 24, 
     automaticLayout: true 
   }); 
+
+  const mediaQuery = window.matchMedia('(max-width: 650px)');
+  const fontSizeQuery = window.matchMedia('(max-width: 725px)');
+  const smallScreenQuery = window.matchMedia('(max-width: 410px)');
+
+  function handleMediaChange(e) {
+    editor.updateOptions({
+      lineNumbers: e.matches ? 'off' : 'on'
+    });
+  }
+  function handleFontSizeChange(e) {
+    editor.updateOptions({
+      fontSize: e.matches ? 18 : 24
+    });
+  }
+  function handleSmallScreenFontSizeChange(e) {
+    editor.updateOptions({
+      fontSize: e.matches ? 10 : (fontSizeQuery.matches ? 18 : 24)
+    });
+  }
+
+  function handleMarginChange(e) {
+    editor.updateOptions({
+      glyphMargin: !e.matches
+    });
+  }
+
+  handleMarginChange(mediaQuery);
+  mediaQuery.addEventListener('change', handleMarginChange);
+
+  handleMediaChange(mediaQuery);
+  mediaQuery.addEventListener('change', handleMediaChange);
+
+  handleFontSizeChange(fontSizeQuery);
+  fontSizeQuery.addEventListener('change', handleFontSizeChange);
+
+  handleSmallScreenFontSizeChange(smallScreenQuery);
+  smallScreenQuery.addEventListener('change', handleSmallScreenFontSizeChange);
 });
+
 
 document.getElementById("runButton").addEventListener("click", () => {
   const code = editor.getValue();
