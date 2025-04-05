@@ -17,7 +17,7 @@ require(['vs/editor/editor.main'], function () {
 
   const mediaQuery = window.matchMedia('(max-width: 650px)');
   const fontSizeQuery = window.matchMedia('(max-width: 725px)');
-  const smallScreenQuery = window.matchMedia('(max-width: 410px)');
+  const smallScreenQuery = window.matchMedia('(max-width: 500px)');
 
   function handleMediaChange(e) {
     editor.updateOptions({
