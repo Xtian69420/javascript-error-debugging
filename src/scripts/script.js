@@ -5,6 +5,7 @@ let codes = [
   toUpperCaseName(123); 
   // 1.) Fix
   // 2.) Display the value.`,
+
   `// Function to find the largest number in an array
 function findLargestNumber(arr) {
     let largest = arr[0]; 
@@ -22,13 +23,17 @@ let numbers = [5, 1, 9, 3, 7];
 let largestNumber = findLargestNumber(number);
 // Display output
 // Expected output: 9`,
+
   `// Bonus!
 // Ligtas ka, hindi nga lang sa langit.`,
+
   `// Function to check if a number is even
 function isEven(number) {
-    if (!number / 2 === 1) {  
+    if (number / 2 === 1) {  
+        break;
         return true; 
     } else {
+        break;
         return false;
     }
 }
