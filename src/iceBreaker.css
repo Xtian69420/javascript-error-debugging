@@ -7,17 +7,25 @@
 
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
 }
 
 body {
-    background-image: url("asstes/bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
 }
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
+
 
 .container {
     display: grid;
@@ -75,7 +83,7 @@ p {
 }
 
 .head2:hover {
-    color: rgb(121, 121, 220);
+    color: rgb(109, 79, 231);
     transform: translateY(-10px);
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -121,7 +129,7 @@ p {
 #prev, #runButton, #next {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #2d5ca2;
+    background-color: rgb(109, 79, 231);
     color: white;
     border: none;
     border-radius: 8px;
@@ -130,13 +138,13 @@ p {
 }
 
 #runButton:hover{
-    background-color: #0e2d5c;
+    background-color: rgb(74, 53, 158);
 }
 #next:hover{
-    background-color: #0e5c0e;
+    background-color: #373737;
 }
 #prev:hover{
-    background-color: #5c0e0e;
+    background-color: #373737;
 }
 #runButton {
     grid-column: 2; 
@@ -144,12 +152,12 @@ p {
 
 #prev {
     grid-column: 1; 
-    background-color: rgb(182, 34, 34);
+    background-color: rgb(110, 110, 110);
 }
 
 #next {
     grid-column: 3; 
-    background-color: rgb(40, 191, 40);
+    background-color: rgb(110, 110, 110);
 }
 
 #output {
@@ -236,20 +244,20 @@ h2{
 
 #remove{
     cursor: pointer;
-    background-color: #a41b1b;
+    background-color: #818181;
 }
 
 #keep{
     cursor: pointer;
-    background-color: #19a019;
+    background-color: rgb(109, 79, 231);
 }
 
 #remove:hover{
-    background-color: #6e1212;
+    background-color: #393939;
 }
 
 #keep:hover{
-    background-color: #127312;
+    background-color: rgb(77, 56, 163);
 }
 
 
@@ -376,7 +384,7 @@ canvas {
         grid-column: 1 / -1;  
         height: 150px;
         background-color: #111;
-        color: #0f0;
+        color: rgb(6, 99, 6);
         padding: 10px;
         font-family: monospace;
         white-space: pre-wrap;
@@ -398,7 +406,7 @@ canvas {
     }
     #modal-name{
         font-size: 30px;
-        color: #4d8eef;
+        color: rgb(109, 79, 231);
     }
     #gl{
         font-size: 18px;
