@@ -307,7 +307,7 @@ p{
 }
 
 
-@media only screen and (max-width:500){
+@media only screen and (max-width:500px){
     .content {
         grid-area: cont;
         display: flex;
