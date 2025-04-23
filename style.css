@@ -8,7 +8,6 @@
 html, body {
     height: 100%;
     width: 100%;
-    margin: 0;
 }
 
 body {
@@ -256,8 +255,13 @@ section {
     .head3{
         font-size: 14px;
     }
-    .container{
-        justify-self: center;
-        align-self: center;
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
     }
 }
+
