@@ -248,12 +248,12 @@ section {
 
 @media screen and (max-width : 500px) {
     .icon {
-        font-size: 35px;
+        font-size: 40px;
         cursor: pointer;
         transition: all 0.3s ease;
     }
     .head3{
-        font-size: 14px;
+        font-size: 15px;
     }
     .container {
         display: flex;
@@ -261,7 +261,7 @@ section {
         align-items: center;
         flex-direction: column;
         height: 100vh;
-        margin: 0;
+        margin: 15px 0;
     }
 }
 
