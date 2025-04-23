@@ -263,5 +263,12 @@ section {
         height: 100vh;
         margin: 15px 0;
     }
+    .nav{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 40px;
+        align-self: center;
+    }
 }
 
